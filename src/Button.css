@@ -1,0 +1,23 @@
+.mic-button {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Regular outside shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.1s, background-color 0.1s;
+}
+
+.mic-button:active {
+    transform: scale(0.9);
+    background-color: darkred;
+}

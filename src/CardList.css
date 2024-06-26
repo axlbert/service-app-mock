@@ -1,0 +1,84 @@
+.card-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #e0e0e0; /* Grey background color */
+    box-shadow: inset -4px 0 8px rgba(0, 0, 0, 0.2); /* Inset frame shadow */
+    border-radius: 12px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.headline {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    transition: height 0.3s ease, flex-wrap 0.3s ease;
+    flex-wrap: nowrap;
+    height: auto; /* Allow height to adjust */
+    position: relative; /* Ensure relative positioning */
+}
+
+.card.expanded {
+    flex-direction: column; /* Change to column when expanded */
+}
+
+.card img {
+    height: 60px; /* Keep the image height fixed */
+    width: auto;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.card div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    flex-grow: 1; /* Allow text to take available space */
+}
+
+.expanded-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%; /* Ensure the buttons take full width */
+    padding-top: 10px; /* Space between text and buttons */
+}
+
+.expanded-content button {
+    flex: 1 1 calc(50% - 10px);
+    padding: 10px;
+    background-color: #d3d3d3; /* Simple grey background */
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    height: 60px; /* Match button height with card height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expanded-content button i {
+    margin-right: 5px;
+}
+
+.expanded-content button:hover {
+    background-color: #b3b3b3;
+}
